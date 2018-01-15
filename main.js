@@ -1,7 +1,9 @@
+// Main.js will contain the inquirer menu and start/restart logic to run the game.
+
 // Require the word module exported from word.js
 var Word = require("./word.js");
 
-// Create a new Word with our constructor and store it here?
+// Create a new Word with our constructor and store it here or in word.js?
 
 // Create Inquirer menu to display the word and prompt the user for guesses.
 // Dependency for inquirer npm
