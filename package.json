@@ -1,0 +1,30 @@
+{
+  "name": "hangman-node.js",
+  "version": "1.0.0",
+  "description": "Command line version of the JavaScript Hangman game we created in Week 3.",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natroberts19/hangman-node.js.git"
+  },
+  "keywords": [
+    "hangman",
+    "node",
+    "inquirer",
+    "require",
+    "constructor"
+  ],
+  "author": "Natalie Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natroberts19/hangman-node.js/issues"
+  },
+  "homepage": "https://github.com/natroberts19/hangman-node.js#readme",
+  "dependencies": {
+    "inquirer": "^5.0.0",
+    "require": "^2.4.20"
+  }
+}
