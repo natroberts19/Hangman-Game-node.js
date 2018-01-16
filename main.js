@@ -17,6 +17,7 @@ inquirer.prompt([
         message: "Guess a letter."
     }
 ]).then(function(answers) {
-    // Now, initialize the variable newWord to ...
+    // test the responses
+    console.log("Guess: ", answers.letter);
 });
 

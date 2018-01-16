@@ -4,7 +4,6 @@
 // var letter = process.argv[2];
 // console.log("What letter did I press? ", letter);
 
-
 // CONSTRUCTOR function for creating the Letter objects:
 var Letter = function(letter) {
     // Set the variable for what the user enters.
