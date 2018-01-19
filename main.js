@@ -3,7 +3,10 @@
 // Require the word module exported from word.js
 var Word = require("./word.js");
 
-// Create a new Word with our constructor and store it here or in word.js? (var wordBank)
+// --------------------------------------------------------
+// Create new Word objects to test word.js
+// --------------------------------------------------------
+var myWord = new Word();
 
 // Create Inquirer menu to display the word and prompt the user for guesses.
 // Dependency for inquirer npm
