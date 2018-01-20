@@ -4,9 +4,9 @@
 // Require the Letter constructor function that was exported from letter.js.
 var Letter = require("./letter");
 
-// --------------------------------------------------------------
+// ----------------------------------
 // TEST the functions from letter.js
-// --------------------------------------------------------------
+// ----------------------------------
 // Create an instance of the Letter object(constructor) and pass hardcode values to test the functions from letter.js.
 var myLetter = new Letter();
 // console.log("myLetter: ", myLetter.getCharacter());
@@ -16,9 +16,9 @@ var myLetter = new Letter();
 // myLetter.guessed = true;
 // console.log("displayCharacter true: ", myLetter.getDisplayCharacter());
 
-// ----------------------------------------------------------
+// ---------------------------------------------------
 // CONSTRUCTOR FUNCTION for creating the Word objects:
-// ----------------------------------------------------------
+// ---------------------------------------------------
 var Word = function (randomWord) {
     // To display the word bank:
     this.wordBank = ["acadia", "everglades", "yosemite", "yellowstone", "glacier", "badlands", "shenandoah"];
@@ -39,15 +39,6 @@ var Word = function (randomWord) {
     this.guessesLeft = 10;
     // Create an array to store wrong guesses.
     this.guessWrongArray = [];
-    // A method to reset the guess/success array after each round. (I don't think I need this but keeping for now. I may need this in the Inquirer menu.)
-    this.reset = function () {
-        this.guessWrongArray = [];
-        for (var i = 0; i < this.numBlanks; i++) {
-            this.blanksAndSuccesses.push("_");
-        }
-    }
-    console.log("From reset method: ", this.blanksAndSuccesses);
-
     // This method creates an array for new Letter objects. Then pushes the random word into an array that includes the new Letter objects. The new array will include the objects in the format of {letter: "", blank: "_", guessed: true/false} (Help from Kristi here...)
     this.createLetterArray = function () {
         var letterObjArray = [];
@@ -105,26 +96,6 @@ var Word = function (randomWord) {
         }
         console.log("From word.js..Check Letter: ", guessedLetter);
     }
-    // This method will hold the code that needs to be run after each guess is made. (Using legacy code here from my Wk 3 game.)
-    this.roundComplete = function() {
-        // First, log an initial status update in the console telling us how many wins, losses, and guesses are left.
-        console.log("Guesses Left: ", this.guessesLeft);
-        // update the page to reflect the new number of guesses and update the correct guesses.
-        console.log("word-blanks: ", this.blanksAndSuccesses.join(" "));
-        console.log("letters-used: ", this.guessWrongArray.join(" "));
-        // Check if all the letters match the solution.
-        if (this.randomWordArray.toString() === this.blanksAndSuccesses.toString()) {
-            console.log("You Won");
-            // startGame();
-        } else if (this.guessesLeft === 0) {
-            console.log("You Lost!");
-            // restart the game.
-            // startGame();
-        }
-    }
-    this.roundComplete();
-    
-
 }
 
 // Exports the Word constructor that will be used in main.js
